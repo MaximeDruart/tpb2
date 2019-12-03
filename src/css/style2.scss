@@ -11,18 +11,24 @@ body {
 
 @font-face {
     font-family: cobol;
-    src: url("Cobol Regular.ttf")
+    src: url("../assets/fonts/Cobol Regular.ttf")
 }
 
 @font-face {
     font-family: acr_bold;
-    src: url("Acronym-Bold.ttf")
+    src: url("../assets/fonts/Acronym-Bold.ttf")
 }
 
 @font-face {
     font-family: acr_reg;
-    src: url("Acronym-Regular.ttf")
+    src: url("../assets/fonts/Acronym-Regular.ttf")
 }
+
+@font-face {
+    font-family: mono_reg;
+    src: url("../assets/fonts/MONO-RGOMODULAR-Regular.otf")
+}
+
 
 $blue : #007ab2;
 

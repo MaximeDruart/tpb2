@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { TimelineMax, TweenMax } from 'gsap';
 import glitchText from './glitch'
 // import logo from './logo.png'
@@ -202,10 +201,6 @@ class App extends React.Component {
     return (
       <div className="container">
         <div className="container-wrapper">
-          {/* <div className="logo">
-            <img className="logo" src={logo} alt="logo"/>
-            <span>the pirate bay</span>  
-          </div> */}
           <div className="query">
             <div className="searching">
               <div ref={div => this.loadingtxtDOM = div} className="searchingtxt">ENTER YOUR QUERY</div>
