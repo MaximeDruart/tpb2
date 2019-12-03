@@ -10,23 +10,22 @@ String.prototype.replaceAt = function (index, replacement) {
 
 let glitchEx=""
 
+// window.onload = glitch.play()
+
 function glitchExtraInit(dom) {
   glitchEx = glitchExtras(dom)
   glitchEx.restart()
 }
 
-function glitchText(domElement, finalString = domElement.innerText, speed = 1, glyphs = "&$-£_#ç§µ¤@", extras=false) {
+function glitchText(domElement, finalString = domElement.innerText, speed = 1, glyphs = "&$-£_#ç§µ¤@") {
   glyphs = shuffle(glyphs)
-  let timeline = extras ?
-  new TimelineMax({
+  let timeline = new TimelineMax({
     paused:true,
     onComplete: glitchExtraInit,
     onCompleteParams : [domElement]
-  })
-  : new TimelineMax({
-    paused: true
-  })
-  let string=""
+  }),
+
+    string=""
   timeline.timeScale(speed)
   domElement.innerText=""
   for (let i = 0; i < finalString.length; i++) {
@@ -56,7 +55,6 @@ function glitchText(domElement, finalString = domElement.innerText, speed = 1, g
 function spanify(dom) {
   let text = dom.innerText
   dom.innerText=""
-  // eslint-disable-next-line no-unused-vars
   for (const letter of text) {
     let span = document.createElement("span")
     span.innerText=letter
